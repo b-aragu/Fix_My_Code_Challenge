@@ -36,7 +36,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (*head == NULL)
 	{
 		*head = saved_head;
-		return (-1); // Index out of bounds
+		/* Index out of bounds */
+		return (-1);
 	}
 
 	tmp = *head;
@@ -52,3 +53,4 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	return (1);
 }
+
